@@ -1,18 +1,35 @@
 {
-  "name": "test-task",
+  "name": "auth",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@progress/kendo-drawing": "^1.10.0",
+    "@progress/kendo-licensing": "^1.1.4",
+    "@progress/kendo-react-buttons": "^4.6.0",
+    "@progress/kendo-react-dialogs": "^4.6.0",
+    "@progress/kendo-react-dropdowns": "^4.6.0",
+    "@progress/kendo-react-inputs": "^4.6.0",
+    "@progress/kendo-react-intl": "^4.6.0",
+    "@progress/kendo-react-layout": "^4.6.0",
+    "@progress/kendo-react-notification": "^4.6.0",
+    "@progress/kendo-react-progressbars": "^4.6.0",
+    "@progress/kendo-react-treeview": "^4.6.0",
+    "@progress/kendo-theme-default": "^4.38.1",
+    "@progress/kendo-theme-material": "^3.33.1",
+    "@progress/kendo-ui": "^2021.2.511",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "node-sass": "5.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=3007 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -21,7 +38,12 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "react-hooks/exhaustive-deps": 0,
+      "no-control-regex": 0,
+      "eqeqeq": 0
+    }
   },
   "browserslist": {
     "production": [
