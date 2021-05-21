@@ -12,12 +12,14 @@ import { GoSettings } from "react-icons/go";
 import { RiDeleteBin5Line } from "react-icons/ri";
 
 import "./PageList.scss";
+import AddPageModal from "../../Components/AddPageModal/AddPageModal";
 
 
 
 const PageList = (props) => {
 
   const [indexShow, setIndexShow] = useState();
+  const [showAddPageModal,setShowAddPageModal]=useState(false)
 
   const pages = [
     {name:'Home',anchor:useRef(null)},
@@ -92,12 +94,13 @@ const PageList = (props) => {
               ))}
             </div>
             <div className="add-btn">
-              <Button>Add New Page</Button>
+              <Button onClick={()=>setShowAddPageModal(true)}>Add New Page</Button>
             </div>
           </div>
         </div>
         <div className="box-2" onClick={()=>setIndexShow()}></div>
       </div>
+      <AddPageModal showModal={showAddPageModal} closeModal={()=>setShowAddPageModal(false)} />
     </div>
   );
 };
