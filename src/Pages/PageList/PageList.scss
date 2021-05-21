@@ -110,6 +110,7 @@
 
 .k-popup{
   .more-content{
+    font-family: Helvetica;
     .content{
       display: flex;
       justify-content: flex-start;
@@ -130,4 +131,8 @@
       border-bottom: none;
     }
   }
+}
+
+.k-list-container{
+  font-family: Helvetica;
 }

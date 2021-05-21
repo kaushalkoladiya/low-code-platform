@@ -57,6 +57,7 @@
           .k-dropdown,
           .k-dropdowntree {
             //width: 330px;
+            font-family: Helvetica;
             width: 260px;
             .k-dropdown-wrap {
               border: none;
@@ -93,4 +94,8 @@
       }
     }
   }
+}
+
+.k-list-container{
+  font-family: Helvetica;
 }

@@ -75,11 +75,11 @@ const PageList = (props) => {
                     />
                     <Popup show={index === indexShow} anchor={page.anchor.current}>
                       <div className='more-content'>
-                        <div className='content'>
+                        <div className='content' onClick={()=>{setShowAddPageModal(true);setIndexShow()}}>
                           <BsPencil />
                           <span>Edit page info</span>
                         </div>
-                        <div className='content'>
+                        <div className='content' onClick={()=>props.history.push('/customize-page')}>
                           <GoSettings />
                           <span>Customize page</span>
                         </div>
