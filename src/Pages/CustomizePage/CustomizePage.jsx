@@ -7,13 +7,13 @@ import { AiOutlineClose } from "react-icons/ai";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { PanelBar, PanelBarItem } from "@progress/kendo-react-layout";
 import logo from "../../Assets/Images/clogo.png";
-import AddPageModal from '../../Components/AddPageModal/AddPageModal'
+import AddPageModal from "../../Components/AddPageModal/AddPageModal";
 
 import "./CustomizePage.scss";
 import { withRouter } from "react-router";
 
 const CustomizePage = (props) => {
-    const [showModal,setShowModal]=useState(false)
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className="customize-container">
       <div className="navbar-wrapper">
@@ -35,7 +35,7 @@ const CustomizePage = (props) => {
           </div>
         </div>
         <div className="bottom-line">
-          <div className="left" onClick={()=>props.history.goBack()}>
+          <div className="left" onClick={() => props.history.goBack()}>
             <IoArrowBackCircleOutline />
             <span>Back</span>
           </div>
@@ -99,7 +99,12 @@ const CustomizePage = (props) => {
             </div>
           </div>
           <div className="box-2">
-            {[1, 2, 3].map((item) => (
+            {new Array(18).fill("null").map((_, index) => (
+              <div className={`grid-item-${index}`}>
+                <FiSettings className='setting' onClick={()=>setShowModal(true)} />
+              </div>
+            ))}
+            {/* {[1, 2, 3].map((item) => (
               <div className="row">
                 {[1, 2, 3, 4, 5, 6].map((item) => (
                   <div className="col">
@@ -107,11 +112,14 @@ const CustomizePage = (props) => {
                   </div>
                 ))}
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
       </div>
-      <AddPageModal showModal={showModal} closeModal={()=>setShowModal(false)} />
+      <AddPageModal
+        showModal={showModal}
+        closeModal={() => setShowModal(false)}
+      />
     </div>
   );
 };
